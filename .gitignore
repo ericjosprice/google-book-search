@@ -2,4 +2,4 @@
 node_modules
 npm-debug.log
 .env
-client/node_modules
+./client/node_modules
