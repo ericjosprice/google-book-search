@@ -1,16 +1,52 @@
 import React from "react";
 import "./style.css";
+import BookResult from "../BookResult";
 
 function SearchResults(props) {
-  return (
-    <ul className="list-group search-results">
-      {props.results.map(result => (
-        <li key={result} className="list-group-item">
-          <img alt="Dog" src={result} className="img-fluid" />
-        </li>
-      ))}
-    </ul>
-  );
+    if(props.path === "/search") {
+        return(
+            <div className="SearchResults">
+                <h3>Results Found</h3>
+                {props.bookData.map((book) => {
+                    const bookInfo = book.volumeInfo;
+                    return <BookResult
+                    title={bookInfo.title}
+                    authors={bookInfo.authors}
+                    description={bookInfo.description}
+                    link={bookInfo.canonicalVolumeLink}
+                    img={bookInfo.imageLinks}
+                    path={props.path}
+                    key={book.id}/>
+                })}
+            </div>
+        );
+    } else if(props.path === "/saved") {
+        if(props.savedBooks.length > 0) {
+            return(
+                <div id="resultsContainer">
+                    <h3>Saved Books</h3>
+                    {props.savedBooks.map((book) => {
+                        return <BookResult
+                        title={book.title}
+                        authors={book.authors}
+                        description={book.description}
+                        link={book.link}
+                        img={book.img}
+                        id={book._id}
+                        path={props.path}
+                        key={book._id}/>
+                    })}
+                </div>
+            );
+        } else {
+            return(
+                 <div className="SearchResults">
+                    <h3>Saved Books</h3>
+                    <p>No saved books.</p>
+                </div>
+            );
+        }
+    }
 }
 
 export default SearchResults;
