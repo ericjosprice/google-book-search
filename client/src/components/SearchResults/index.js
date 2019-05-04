@@ -21,7 +21,7 @@ function SearchResults(props) {
             </div>
         );
     } else if(props.path === "/saved") {
-        if(props.savedBooks.length > 0) {
+        if(props.savedBooks) {
             return(
                 <div id="resultsContainer">
                     <h3>Saved Books</h3>
@@ -31,7 +31,7 @@ function SearchResults(props) {
                         authors={book.authors}
                         description={book.description}
                         link={book.link}
-                        img={book.img}
+                        img={book.image}
                         id={book._id}
                         path={props.path}
                         key={book._id}/>

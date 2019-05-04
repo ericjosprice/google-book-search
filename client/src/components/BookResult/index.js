@@ -58,7 +58,7 @@ class BookResult extends React.Component {
                 <div className="row">
                     <div className="aboutBook">
                         <h4>{this.props.title}</h4>
-                        <p>By: {(this.props.authors)? this.props.authors.join(", "): "N/A"}</p>
+                        <p>By: {(this.props.authors)? this.props.authors: "N/A"}</p>
                     </div>
                     <div className="btnDiv">
                         {
