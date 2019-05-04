@@ -3,7 +3,7 @@ import "./style.css";
 import BookResult from "../BookResult";
 
 function SearchResults(props) {
-    if(props.path === "/search") {
+    if(props.path === "/") {
         return(
             <div className="SearchResults">
                 <h3>Results Found</h3>
