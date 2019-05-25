@@ -14,4 +14,4 @@ Search - User can search for books via the Google Books API and render them here
 
 Saved - Renders all books saved to the Mongo database. User has an option to "View" the book, bringing them to the book on Google Books, or "Delete" a book, removing it from the Mongo database.
 
-APP was created and mantained by Eric Price
+APP created and mantained by Eric Price
