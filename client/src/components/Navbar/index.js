@@ -1,31 +1,33 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./style.css";
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
+
+// the active links did not work like the examples provided in class, which dont work either. I added NavLink, instead of Link, and the exact prop to the root link to remedy this. 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <Link className="navbar-brand" to="/">
+    <nav className="navbar navbar-expand navbar-light bg-light" >
+      <NavLink className="navbar-brand" to="/">
         Google-Book-Search
-      </Link>
+      </NavLink>
       <div>
         <ul className="navbar-nav">
           <li className="nav-item">
-            <Link
+            <NavLink
               to="/"
-              className="nav-link"activeClassName="nav-link active" 
-              onlyActiveOnIndex >
+              exact className="nav-link" activeClassName="active" 
+               >
               Search
-            </Link>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <Link
+            <NavLink
               to="/saved"
-              className="nav-link" activeClassName="nav-link active" 
-              onlyActiveOnIndex>
+              className="nav-link" activeClassName="active" 
+              >
               Saved
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </div>
