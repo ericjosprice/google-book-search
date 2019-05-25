@@ -4,14 +4,11 @@ import SearchResults from "../components/SearchResults";
 import API from "../utils/API";
 
 class Saved extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
+    state = {
             savedBooks: []
         }
-    }
 
-    componentWillMount() {
+    componentWillMount = () => {
         API.getBooks().then(
             (response) => {
                 this.setState({savedBooks: response.data});
@@ -24,7 +21,7 @@ class Saved extends React.Component {
     }
 
     render() {
-        console.log(this.state.savedBooks);
+        // console.log(this.state.savedBooks);
         return(
             <div className="container">
             
