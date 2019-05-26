@@ -9,3 +9,12 @@
     margin:0;
     padding: 0;
 }
+
+.btnDiv {
+
+    margin:5px;
+}
+button {
+    margin:2px;
+    background-color: goldenrod;
+}
