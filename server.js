@@ -16,7 +16,7 @@ app.use(routes);
 
 // Connect to the Mongo DB
 // mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googlebooks");
-mongoose.connect(process.env.MONGODB_URI || "mongodb://user1:password$1@ds261616.mlab.com:61616/heroku_lf19cbk7");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://user1:password$1@ds151416.mlab.com:51416/heroku_l72kttnh");
 
 // initialize port listening
 app.listen(PORT, function() {
