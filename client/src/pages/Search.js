@@ -32,6 +32,7 @@ class Search extends React.Component {
         return(
             <div className="container">
                 <SearchForm handleInputChange={this.handleInputChange} handleFormSubmit={this.handleFormSubmit} />
+                <hr/>
                 {(this.state.bookData.length > 0 )?
                     <SearchResults bookData={this.state.bookData} path={this.props.match.path}/> : <div></div>
                 }

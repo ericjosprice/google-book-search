@@ -1,0 +1,11 @@
+.bookResult {
+    /* border: 1px solid lightgray; */
+    padding:5px;
+    margin-bottom:10px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+
+}
+.row {
+    margin:0;
+    padding: 0;
+}

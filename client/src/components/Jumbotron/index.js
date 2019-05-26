@@ -1,11 +1,13 @@
 import React from "react";
+import "./style.css";
+
 
 function Jumbotron(){
     return(
         <div className="jumbotron jumbotron-fluid">
-        <div className="container">
-            <h1 className="display-4">React Google Book Search</h1>
-            <p>Search for Books and save books to your View Later list.</p>
+        <div className="title">
+            <h1>React Google Book Search</h1>
+            <h4>Search for Books and save books to your View Later list.</h4>
         </div>
         </div>
 
