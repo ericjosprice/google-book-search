@@ -5,7 +5,7 @@
 Utilize React lifecycle methods to query and display books based on user searches
 Use Node, Express and MongoDB so that users can save books to review or purchase later
 
-A working version of the application can be found at https://google-book-search-ejp.herokuapp.com
+A working version of the application can be found at https://googlebookapp-ejp.herokuapp.com
 
 
 ##What This Application Does
