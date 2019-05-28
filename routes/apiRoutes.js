@@ -21,7 +21,7 @@ router.post("/search", (req, res) => {
     // set bookTitle to the req.body.title with spaces replaced with plus signs(+)
     let booktitle = req.body.title.replace(/\s/g, "+");
     axios.get(
-        `https://www.googleapis.com/books/v1/volumes?q=${booktitle}&maxResults=5&key=API_KEY`)
+        `https://www.googleapis.com/books/v1/volumes?q=${booktitle}&maxResults=5&key=` + API_Key)
     .then(response => {
         // console.log(response.data.items)
         res.json(response.data.items)})
