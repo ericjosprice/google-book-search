@@ -17,19 +17,11 @@ router.get("/api/books", (req, res) => {
 
 //we don't make outside API calls from within react, so we make them from the server root folder
 
-// axios.get("https://www.googleapis.com/books/v1/volumes?q=" + query + "&maxResults=5&key=" + process.env.API_Key)
-
-// GET https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes&key=yourAPIKey
-
-// const BASEURL = "https://www.googleapis.com/books/v1/volumes?q=";
-
-// AIzaSyCAqtoJi5LLktUZxoTRqYzqWLiS7XrAcWs
-
 router.post("/search", (req, res) => {
     // set bookTitle to the req.body.title with spaces replaced with plus signs(+)
     let booktitle = req.body.title.replace(/\s/g, "+");
     axios.get(
-        `https://www.googleapis.com/books/v1/volumes?q=${booktitle}&maxResults=5&key=AIzaSyCAqtoJi5LLktUZxoTRqYzqWLiS7XrAcWs`)
+        `https://www.googleapis.com/books/v1/volumes?q=${booktitle}&maxResults=5&key=API_KEY`)
     .then(response => {
         // console.log(response.data.items)
         res.json(response.data.items)})
